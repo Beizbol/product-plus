@@ -1,0 +1,59 @@
+---
+import Page from "../layouts/Page.astro";
+---
+
+<Page title="Home">
+  <section class="bg">
+    <div class="card">
+      <h2 class="big">👤</h2>
+      <h2>Brian Surrett</h2>
+      <h3 class="txt">Independant Sales Rep</h3>
+      <ul>
+        <li id="call">613-850-9719</li>
+        <li id="email">b.surrett20@gmail.com</li>
+      </ul>
+    </div>
+  </section>
+
+  <style>
+    .card {
+      margin: 2rem;
+      padding: 2.5rem;
+      background-color: white;
+      color: black;
+      background-image: url("/imgs/cream_paper.png");
+      box-shadow: 0.5rem 0.5rem 2rem 0.5rem #111;
+      width: fit-content;
+      border-radius: 0.25rem;
+      object-fit: cover;
+    }
+
+    .big {
+      font-size: 5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bg {
+      background-color: var(--color-accent);
+    }
+
+    .txt {
+      color: var(--color-accent);
+    }
+
+    li {
+      padding-inline-start: 1ch;
+      font-size: large;
+      font-weight: 500;
+    }
+
+    #call {
+      list-style-type: "📞";
+    }
+
+    #email {
+      list-style-type: "📧";
+    }
+  </style>
+</Page>

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="generator" content="Astro v2.1.2">
+    <meta name="generator" content="Astro v2.1.4">
     <title>Home</title>
-  <link rel="stylesheet" href="/assets/index.6b677d58.css" /><script type="module">function l(){const e=localStorage.getItem("theme");if(e===null||e==="")return"darkTheme";const t=document.getElementById("themeSelect");t!==null&&(t.value=e)}l();
+  <link rel="stylesheet" href="/assets/index.c13237f3.css" />
+<link rel="stylesheet" href="/assets/demo.4eed9681.css" /><script type="module">function l(){const e=localStorage.getItem("theme");if(e===null||e==="")return"darkTheme";const t=document.getElementById("themeSelect");t!==null&&(t.value=e)}l();
 </script></head>
   <body class="astro-QO5XHE7C">
     <header class="astro-QO5XHE7C">
@@ -15,14 +16,14 @@
   <input type="checkbox" class="chk astro-QS7BGSLL">
   <div class="menu astro-QS7BGSLL">
     <select id="themeSelect" onchange="localStorage.setItem('theme', this.value);" class="astro-QS7BGSLL">
-      <option id="lightTheme" class="astro-QS7BGSLL">Light</option>
-      <option id="mintTheme" class="astro-QS7BGSLL">Mint</option>
-      <option id="skyTheme" class="astro-QS7BGSLL">Sky</option>
-      <option id="prettyTheme" class="astro-QS7BGSLL">Pretty</option>
-      <option id="forestTheme" class="astro-QS7BGSLL">Forest</option>
-      <option id="denimTheme" class="astro-QS7BGSLL">Denim</option>
-      <option id="deepTheme" class="astro-QS7BGSLL">Deep</option>
-      <option id="darkTheme" class="astro-QS7BGSLL">Dark</option>
+      <option id="lighterTheme" class="astro-QS7BGSLL">Blue 0</option>
+      <option id="lightTheme" class="astro-QS7BGSLL">Blue 1</option>
+      <option id="paleTheme" class="astro-QS7BGSLL">Blue 2</option>
+      <option id="pureTheme" class="astro-QS7BGSLL">Blue 3</option>
+      <option id="mediumTheme" class="astro-QS7BGSLL">Blue 4</option>
+      <option id="darkTheme" class="astro-QS7BGSLL">Blue 5</option>
+      <option id="navyTheme" class="astro-QS7BGSLL">Blue 6</option>
+      <option id="midnightTheme" class="astro-QS7BGSLL">Blue 7</option>
     </select>
   </div>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 409.952 409.952" xml:space="preserve" class="astro-QS7BGSLL">
@@ -51,26 +52,55 @@
     </header>
     <main class="astro-QO5XHE7C">
       <section class="astro-J7PV25F6">
-    <h2 class="astro-J7PV25F6">Product Plus represents Erikson Consumer</h2>
     <div class="card astro-J7PV25F6">
-      <a href="https://www.eriksonconsumer.com/" class="astro-J7PV25F6"><img src="/imgs/demo/erikson-logo.svg" alt="" class="astro-J7PV25F6"></a>
-      <h3 class="astro-J7PV25F6">Brian Surrett</h3>
-      <h4 class="astro-J7PV25F6">Sales Agent serving Ontario</h4>
+      <img class="photo astro-J7PV25F6" src="/imgs/brian.jpg" alt="">
+      <h2 class="astro-J7PV25F6">Brian Surrett</h2>
+      <h3 class="astro-J7PV25F6">Independant Sales Rep</h3>
       <ul class="astro-J7PV25F6">
-        <li class="astro-J7PV25F6">613-850-9719</li>
-        <li class="astro-J7PV25F6">b.surrett20@gmail.com</li>
+        <li id="call" class="astro-J7PV25F6">613-850-9719</li>
+        <li id="email" class="astro-J7PV25F6">b.surrett20@gmail.com</li>
       </ul>
     </div>
   </section><br class="astro-J7PV25F6"><section class="astro-J7PV25F6">
-    <h2 class="astro-J7PV25F6">Product Plus represents Totem Acoustic</h2>
+    <h2 class="astro-J7PV25F6">Product Plus Represents:</h2>
     <div class="card astro-J7PV25F6">
-      <a href="https://totemacoustic.com/" class="astro-J7PV25F6"><img src="/imgs/demo/totem-logo.png" alt="" class="astro-J7PV25F6"></a>
-      <h3 class="astro-J7PV25F6">Brian Surrett</h3>
-      <h4 class="astro-J7PV25F6">Sales Agent serving Ontario</h4>
-      <ul class="astro-J7PV25F6">
-        <li class="astro-J7PV25F6">613-850-9719</li>
-        <li class="astro-J7PV25F6">b.surrett20@gmail.com</li>
-      </ul>
+      <a href="https://www.eriksonconsumer.com/" class="astro-J7PV25F6">
+        <img class="logo astro-J7PV25F6" src="/imgs/demo/erikson-logo.svg" alt="">
+      </a>
+      <h3 class="astro-J7PV25F6">Sales Agent Serving Ontario</h3>
+    </div>
+
+    <div class="card astro-J7PV25F6">
+      <a href="https://totemacoustic.com/" class="astro-J7PV25F6">
+        <img class="logo astro-J7PV25F6" src="/imgs/demo/totem-logo.png" alt="">
+      </a>
+      <h3 class="astro-J7PV25F6">Sales Agent Serving Ontario</h3>
+    </div>
+
+    <div class="card astro-J7PV25F6">
+      <a href="https://www.jaymar.co/" class="astro-J7PV25F6">
+        <svg class="logo astro-J7PV25F6" viewBox="0 0 159.705 26.41">
+          <g id="Groupe_330" data-name="Groupe 330" transform="translate(-389.738 -35.467)" class="astro-J7PV25F6">
+            <rect id="Rectangle_57" data-name="Rectangle 57" width="6.38" height="6.387" transform="translate(389.738 35.603)" class="astro-J7PV25F6"></rect>
+            <rect id="Rectangle_58" data-name="Rectangle 58" width="6.579" height="26.256" transform="translate(462.277 35.603)" class="astro-J7PV25F6"></rect>
+            <g id="Groupe_69" data-name="Groupe 69" transform="translate(389.82 35.467)" class="astro-J7PV25F6">
+              <path id="Tracé_215" data-name="Tracé 215" d="M403.944,35.626V50.861c0,3.559-.653,5.129-3.961,5.129-2.835,0-3.776-1.853-3.776-5.129V49.214h-6.361c0,1.386-.013,2.423-.013,3.511,0,7.685,7.558,9.173,10.575,9.173,2.98,0,10.85.153,10.85-12.172v-14.1Z" transform="translate(-389.833 -35.489)" class="astro-J7PV25F6"></path>
+              <rect id="Rectangle_59" data-name="Rectangle 59" width="6.344" height="6.353" transform="translate(153.18 20.056)" class="astro-J7PV25F6"></rect>
+              <path id="Tracé_216" data-name="Tracé 216" d="M557.215,61.9V46.662c0-3.559.653-5.128,3.96-5.128,2.835,0,3.777,1.852,3.777,5.128v1.646h6.36c0-1.386.012-2.422.012-3.51,0-7.685-7.557-9.173-10.573-9.173-2.981,0-10.85-.153-10.85,12.172V61.9Z" transform="translate(-411.701 -35.489)" class="astro-J7PV25F6"></path>
+              <path id="Tracé_217" data-name="Tracé 217" d="M488.631,41.778c1.879,1.326,1.6,3.487,1.6,6.007v14.1h7.314V46.65c0-3.558,1.19-5.5,4.543-5.5,3.155,0,4.23,2.225,4.23,5.5V61.883h6.974c0-14.971.012-16.007.012-17.1,0-9.337-7.888-9.173-10.9-9.173h-5.36v1.857l-1.927-1.93H483.278v6.632c2.256-1.629,4.331-1.191,5.353-.4" transform="translate(-402.599 -35.477)" class="astro-J7PV25F6"></path>
+              <path id="Tracé_218" data-name="Tracé 218" d="M432.475,43.764c0-2.813-1.545-3.577-4.656-3.577-3.542,0-4.149,2.31-4.352,3.788h-6.832c.81-7.772,7.977-8.508,12.045-8.508,3.8,0,10.728,1.1,10.728,7.343V61.877h-4.851l-2.205-2.164v2.164h-8.378c-4.048,0-8.2-1.852-8.2-7.1,0-4.959,3.34-7.315,7.783-7.894l6.376-.906c.237-.064.419-.093.6-.133l-.024,4.145a26.334,26.334,0,0,1-2.843.544c-2.632.429-4.808,1.049-4.808,3.814a3.02,3.02,0,0,0,3.289,3.052c3.4,0,6.326-1.185,6.326-5.007V43.764Z" transform="translate(-393.377 -35.467)" class="astro-J7PV25F6"></path>
+              <path id="Tracé_219" data-name="Tracé 219" d="M536.159,43.764c0-2.813-1.544-3.577-4.655-3.577-3.542,0-4.149,2.31-4.353,3.788H520.32c.811-7.772,7.978-8.508,12.045-8.508,3.794,0,10.728,1.1,10.728,7.343V61.877h-4.852l-2.205-2.164v2.164h-8.379c-4.048,0-8.2-1.852-8.2-7.1,0-4.959,3.34-7.315,7.783-7.894l6.377-.906c.236-.064.419-.093.6-.133l-.024,4.145a26.24,26.24,0,0,1-2.841.544c-2.633.429-4.809,1.049-4.809,3.814a3.019,3.019,0,0,0,3.29,3.052c3.4,0,6.324-1.185,6.324-5.007V43.764Z" transform="translate(-407.542 -35.467)" class="astro-J7PV25F6"></path>
+              <path id="Tracé_220" data-name="Tracé 220" d="M443.406,35.625,451.84,49.9l3.149-7.783-3.907-6.49Z" transform="translate(-397.152 -35.489)" class="astro-J7PV25F6"></path>
+              <path id="Tracé_221" data-name="Tracé 221" d="M450.131,61.9l10.428-26.273h7.183L457.311,61.9Z" transform="translate(-398.07 -35.489)" class="astro-J7PV25F6"></path>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <h3 class="astro-J7PV25F6">Eastern and Northern Ontario</h3>
+    </div>
+    <div class="card astro-J7PV25F6">
+      <a href="https://hpc.jamindustries.com/" class="astro-J7PV25F6"><img class="logo inv astro-J7PV25F6" src="/imgs/hpc.png" alt=""></a>
+      <h3 class="astro-J7PV25F6">Eastern and Northern Ontario</h3>
     </div>
   </section>
       <footer class="astro-QO5XHE7C">&copy; 2023, Brian Surrett. All rights reserved.</footer>

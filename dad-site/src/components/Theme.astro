@@ -3,14 +3,14 @@
   <input type="checkbox" class="chk" />
   <div class="menu">
     <select id="themeSelect" onchange="localStorage.setItem('theme', this.value);">
-      <option id="lightTheme">Light</option>
-      <option id="mintTheme">Mint</option>
-      <option id="skyTheme">Sky</option>
-      <option id="prettyTheme">Pretty</option>
-      <option id="forestTheme">Forest</option>
-      <option id="denimTheme">Denim</option>
-      <option id="deepTheme">Deep</option>
-      <option id="darkTheme">Dark</option>
+      <option id="lighterTheme">Blue 0</option>
+      <option id="lightTheme">Blue 1</option>
+      <option id="paleTheme">Blue 2</option>
+      <option id="pureTheme">Blue 3</option>
+      <option id="mediumTheme">Blue 4</option>
+      <option id="darkTheme">Blue 5</option>
+      <option id="navyTheme">Blue 6</option>
+      <option id="midnightTheme">Blue 7</option>
     </select>
   </div>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 409.952 409.952" xml:space="preserve">
@@ -98,92 +98,106 @@
   }
 </style>
 <style is:global>
-  :root:has(#lightTheme:checked) {
+
+:root:has(#lighterTheme:checked) {
     --color-bg: white;
     --color-bg-alt: #ddd;
     --color-border: black;
     --color-border-alt: black;
     --color-text: black;
     --color-text-alt: #bbb;
-    --color-accent: deepskyblue;
-    --color-accent-alt: deepskyblue;
+    --color-accent: dodgerblue;
+    --color-accent-alt: dodgerblue;
   }
-  :root:has(#mintTheme:checked) {
-    --color-bg: aquamarine;
-    --color-bg-alt: rgb(150, 240, 255);
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
+
+:root:has(#lightTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
     --color-text: black;
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: deepskyblue;
+    --color-text-alt: #bbb;
+    --color-accent: rgb(20, 110, 245);
+    --color-accent-alt: rgb(20, 110, 245);;
   }
 
-  :root:has(#skyTheme:checked) {
-    --color-bg: hsl(204, 100%, 80%);
-    --color-bg-alt: hsl(204, 100%, 70%);
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
+  :root:has(#paleTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
     --color-text: black;
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: deepskyblue;
+    --color-text-alt: #bbb;
+    --color-accent: rgb(40, 85, 255);
+    --color-accent-alt: rgb(40, 85, 255);
   }
 
-  :root:has(#prettyTheme:checked) {
-    --color-bg: rgb(255, 180, 255);
-    --color-bg-alt: rgb(200, 170, 255);
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
+  :root:has(#pureTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
     --color-text: black;
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: deepskyblue;
+    --color-text-alt: #bbb;
+    --color-accent: blue;
+    --color-accent-alt: blue;
   }
 
-  :root:has(#forestTheme:checked) {
-    --color-bg: hsl(126, 95%, 8%);
-    --color-bg-alt: hsl(126, 95%, 12%);
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
-    --color-text: hsl(10, 21%, 95%);
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: deepskyblue;
-  }
+  /* :root:has(#pureTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
+    --color-text: black;
+    --color-text-alt: #bbb;
+    --color-accent: blue;
+    --color-accent-alt: blue;
+  } */
 
-  :root:has(#denimTheme:checked) {
-    --color-bg: hsl(212, 95%, 16%);
-    --color-bg-alt: hsl(212, 95%, 24%);
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
-    --color-text: hsl(10, 21%, 95%);
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: darkorange;
-  }
-
-  :root:has(#deepTheme:checked) {
-    --color-bg: hsl(265, 96%, 10%);
-    --color-bg-alt: hsl(265, 95%, 16%);
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
-    --color-text: hsl(10, 21%, 95%);
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: deepskyblue;
+  :root:has(#mediumTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
+    --color-text: black;
+    --color-text-alt: #bbb;
+    --color-accent: mediumblue;
+    --color-accent-alt: mediumblue;
   }
 
   :root:has(#darkTheme:checked) {
-    --color-bg: hsl(222, 5%, 10%);
-    --color-bg-alt: black;
-    --color-border: hsl(17, 24%, 90%);
-    --color-border-alt: hsl(17, 24%, 90%);
-    --color-text: hsl(10, 21%, 95%);
-    --color-text-alt: red;
-    --color-accent: darkorange;
-    --color-accent-alt: deepskyblue;
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
+    --color-text: black;
+    --color-text-alt: #bbb;
+    --color-accent: darkblue;
+    --color-accent-alt: darkblue;
   }
+
+  :root:has(#navyTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
+    --color-text: black;
+    --color-text-alt: #bbb;
+    --color-accent: navy;
+    --color-accent-alt: navy;
+  }
+
+  :root:has(#midnightTheme:checked) {
+    --color-bg: white;
+    --color-bg-alt: #ddd;
+    --color-border: black;
+    --color-border-alt: black;
+    --color-text: black;
+    --color-text-alt: #bbb;
+    --color-accent: midnightblue;
+    --color-accent-alt: midnightblue;
+  }
+
 </style>
 <script>
   function loadTheme() {
