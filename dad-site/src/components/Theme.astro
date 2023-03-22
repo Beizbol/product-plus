@@ -3,14 +3,14 @@
   <input type="checkbox" class="chk" />
   <div class="menu">
     <select id="themeSelect" onchange="localStorage.setItem('theme', this.value);">
-      <option id="lighterTheme">Blue 0</option>
-      <option id="lightTheme">Blue 1</option>
-      <option id="paleTheme">Blue 2</option>
-      <option id="pureTheme">Blue 3</option>
-      <option id="mediumTheme">Blue 4</option>
-      <option id="darkTheme">Blue 5</option>
-      <option id="navyTheme">Blue 6</option>
-      <option id="midnightTheme">Blue 7</option>
+      <option id="noTheme">None</option>
+      <option id="wTheme">Lightest</option>
+      <option id="aTheme">Lighter</option>
+      <option id="bTheme">Light</option>
+      <option id="cTheme">Dim</option>
+      <option id="dTheme">Dark</option>
+      <option id="eTheme">Darker</option>
+      <option id="fTheme">Darkest</option>
     </select>
   </div>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 409.952 409.952" xml:space="preserve">
@@ -98,106 +98,52 @@
   }
 </style>
 <style is:global>
-
-:root:has(#lighterTheme:checked) {
+  :root {
     --color-bg: white;
     --color-bg-alt: #ddd;
     --color-border: black;
     --color-border-alt: black;
     --color-text: black;
     --color-text-alt: #bbb;
-    --color-accent: dodgerblue;
-    --color-accent-alt: dodgerblue;
+    --color-accent: rgb(10, 75, 225);
+    --color-accent-alt: rgb(20, 110, 255);
   }
 
-:root:has(#lightTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: rgb(20, 110, 245);
-    --color-accent-alt: rgb(20, 110, 245);;
+  :root:has(#noneTheme:checked) {
+    --bg-br: 1;
+    --bg-blur: 0px;
   }
 
-  :root:has(#paleTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: rgb(40, 85, 255);
-    --color-accent-alt: rgb(40, 85, 255);
+  :root:has(#wTheme:checked) {
+    --bg-br: 90%;
+    --bg-blur: 0px;
   }
 
-  :root:has(#pureTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: blue;
-    --color-accent-alt: blue;
+  :root:has(#aTheme:checked) {
+    --bg-br: 80%;
+    --bg-blur: 0px;
   }
 
-  /* :root:has(#pureTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: blue;
-    --color-accent-alt: blue;
-  } */
-
-  :root:has(#mediumTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: mediumblue;
-    --color-accent-alt: mediumblue;
+  :root:has(#bTheme:checked) {
+    --bg-br: 60%;
+    --bg-blur: 0px;
   }
-
-  :root:has(#darkTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: darkblue;
-    --color-accent-alt: darkblue;
+  :root:has(#cTheme:checked) {
+    --bg-br: 50%;
+    --bg-blur: 0px;
   }
-
-  :root:has(#navyTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: navy;
-    --color-accent-alt: navy;
+  :root:has(#dTheme:checked) {
+    --bg-br: 30%;
+    --bg-blur: 0px;
   }
-
-  :root:has(#midnightTheme:checked) {
-    --color-bg: white;
-    --color-bg-alt: #ddd;
-    --color-border: black;
-    --color-border-alt: black;
-    --color-text: black;
-    --color-text-alt: #bbb;
-    --color-accent: midnightblue;
-    --color-accent-alt: midnightblue;
+  :root:has(#eTheme:checked) {
+    --bg-br: 20%;
+    --bg-blur: 0px;
   }
-
+  :root:has(#fTheme:checked) {
+    --bg-br: 10%;
+    --bg-blur: 0px;
+  }
 </style>
 <script>
   function loadTheme() {
@@ -205,7 +151,7 @@
     const theme = localStorage.getItem("theme");
     // console.log(theme);
     if (theme === null || theme === "") {
-      return "darkTheme";
+      return "blueTheme";
     }
     const sel = document.getElementById("themeSelect") as HTMLSelectElement | null;
     // console.log(chk);

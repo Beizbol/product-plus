@@ -1,0 +1,55 @@
+---
+import fs from "fs";
+import path from "path";
+
+const imgs = fs
+  .readdirSync("./public/logos", { withFileTypes: true })
+  .filter((item) => !item.isDirectory())
+  .map((item) => item.name);
+
+const logos = imgs.map((logo) => {
+  // const str = String(logo);
+  return path.join("logos", logo);
+});
+
+// console.log(logos);
+---
+
+<div class="wrap">
+  {logos.map((logo) => <img class="logo" src={logo} />)}
+</div>
+
+<style>
+  .wrap {
+    position: absolute;
+    left: 0;
+    top: 3rem;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 0;
+    background-color: white;
+    z-index: -1;
+    filter: blur(1px) brightness(var(--bg-br));
+  }
+
+  .logo {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    min-width: 5rem;
+    min-height: 5rem;
+    max-width: 20rem;
+    max-height: 10rem;
+    object-fit: contain;
+    color: black;
+  }
+
+  svg {
+    fill: black;
+  }
+</style>
