@@ -1,15 +1,12 @@
 ---
-import fs from "fs";
-import path from "path";
+const pngs = await Astro.glob("../../public/logos/*.png");
+const svgs = await Astro.glob("../../public/logos/*.svg");
 
-const imgs = fs
-  .readdirSync("./public/logos", { withFileTypes: true })
-  .filter((item) => !item.isDirectory())
-  .map((item) => item.name);
+const imgs = pngs.concat(svgs);
 
 const logos = imgs.map((logo) => {
-  // const str = String(logo);
-  return path.join("logos", logo);
+  const str = String(logo.default);
+  return str.slice(7);
 });
 
 // console.log(logos);
