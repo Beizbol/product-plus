@@ -1,5 +1,4 @@
 ---
-import Bg from "../components/Bg.astro";
 import Theme from "../components/Theme.astro";
 
 export interface Props {
@@ -26,7 +25,36 @@ const year = new Date().getFullYear();
       <h1 class="title"><a href="/">Product Plus</a> {title}</h1>
       <Theme />
     </header>
-    {bg && <Bg />}
+    {
+      bg && (
+        <div class="wrap">
+          <img class="logo" src="/logos/akg.png" />
+          <img class="logo" src="/logos/arcam.svg" />
+          <img class="logo" src="/logos/austere.png" />
+          <img class="logo" src="/logos/crown.png" />
+          <img class="logo" src="/logos/dbx.png" />
+          <img class="logo" src="/logos/dual.png" />
+          <img class="logo" src="/logos/fiio.png" />
+          <img class="logo" src="/logos/flexson.png" />
+          <img class="logo" src="/logos/hk.svg" />
+          <img class="logo" src="/logos/human.png" />
+          <img class="logo" src="/logos/jaymar.svg" />
+          <img class="logo" src="/logos/jbl.png" />
+          <img class="logo" src="/logos/jbl_pro.png" />
+          <img class="logo" src="/logos/kin.png" />
+          <img class="logo" src="/logos/lab.png" />
+          <img class="logo" src="/logos/mark.svg" />
+          <img class="logo" src="/logos/marshal.png" />
+          <img class="logo" src="/logos/mission.png" />
+          <img class="logo" src="/logos/one_for_all.svg" />
+          <img class="logo" src="/logos/revel.svg" />
+          <img class="logo" src="/logos/soundcraft.png" />
+          <img class="logo" src="/logos/synth.svg" />
+          <img class="logo" src="/logos/thorens.png" />
+          <img class="logo" src="/logos/velodyne.png" />
+        </div>
+      )
+    }
     <main>
       <slot />
       <footer>&copy; {year}, Brian Surrett. All rights reserved.</footer>
@@ -83,6 +111,35 @@ const year = new Date().getFullYear();
       .title a {
         text-decoration: none;
         color: var(--color-accent);
+      }
+
+      .wrap {
+        position: absolute;
+        left: 0;
+        top: 3rem;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        padding: 2rem;
+        margin: 0;
+        background-color: white;
+        z-index: -1;
+        filter: blur(1px) brightness(var(--bg-br));
+      }
+
+      .logo {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        min-width: 5rem;
+        min-height: 5rem;
+        max-width: 20rem;
+        max-height: 10rem;
+        object-fit: contain;
+        color: black;
       }
 
       footer {
