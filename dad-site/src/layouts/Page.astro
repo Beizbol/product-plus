@@ -22,8 +22,7 @@ const year = new Date().getFullYear();
     <header>
       <h1 class="title"><a href="/">Product Plus</a> {title}</h1>
     </header>
-    <!-- {
-      bg && ( -->
+
     <div class="bg">
       <img class="logo" src="/logos/jbl.png" />
       <img class="logo" src="/logos/akg.png" />
@@ -32,6 +31,7 @@ const year = new Date().getFullYear();
       <img class="logo" src="/logos/marshal.png" />
       <img class="logo" src="/logos/arcam.svg" />
       <img class="logo" src="/logos/hk.svg" />
+      <img class="logo" src="/imgs/demo/totem-logo.png" />
       <img class="logo" src="/logos/mark.svg" />
       <img class="logo" src="/logos/dbx.png" />
       <img class="logo" src="/logos/jaymar.svg" />
@@ -50,8 +50,7 @@ const year = new Date().getFullYear();
       <img class="logo" src="/logos/thorens.png" />
       <img class="logo" src="/logos/velodyne.png" />
     </div>
-    <!-- )
-    } -->
+
     <main>
       <slot />
       <footer>&copy; {year}, Brian Surrett. All rights reserved.</footer>
@@ -146,22 +145,22 @@ const year = new Date().getFullYear();
         padding: 1rem;
         z-index: -1;
         position: absolute;
-        top: 3rem;
+        top: 2rem;
         left: 0;
         bottom: 0;
         right: 0.5rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem;
+        gap: 0rem 2rem;
         justify-content: space-between;
         background-color: white;
-        filter: blur(1px) brightness(var(--bg-br));
+        filter: blur(1px) brightness(69%);
       }
 
       .logo {
         -moz-user-select: none;
         -webkit-user-select: none;
-        max-width: 20vw;
+        max-width: 16vw;
         max-height: 12vh;
         user-select: none;
         object-fit: contain;
@@ -256,6 +255,11 @@ const year = new Date().getFullYear();
           align-items: center;
         }
 
+        .bg {
+          padding: 2rem;
+          gap: 0rem 2rem;
+        }
+
         footer {
           grid-column: span 2;
         }
@@ -265,6 +269,16 @@ const year = new Date().getFullYear();
         main {
           grid-template-rows: 1fr 1fr 1fr 0fr;
           grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .logo {
+          max-width: 12rem;
+          max-height: 15vh;
+        }
+
+        .bg {
+          padding: 4rem;
+          gap: 0rem 4rem;
         }
 
         footer {
