@@ -27,26 +27,28 @@ const year = new Date().getFullYear();
       <img class="logo" src="/logos/jbl.png" />
       <img class="logo" src="/logos/akg.png" />
       <img class="logo" src="/logos/jbl_pro.png" />
-      <img class="logo" src="/logos/kin.png" />
-      <img class="logo" src="/logos/marshal.png" />
       <img class="logo" src="/logos/arcam.svg" />
       <img class="logo" src="/logos/hk.svg" />
-      <img class="logo" src="/imgs/demo/totem-logo.png" />
-      <img class="logo" src="/logos/mark.svg" />
+      <img class="logo" src="/logos/kin.png" />
+      <img class="logo" src="/logos/marshal.png" />
+      <img class="logo" src="/logos/crown.png" />
+      <img class="logo" src="/logos/synth.svg" />
+      <img class="logo" src="/imgs/demo/erikson-logo.svg" />
       <img class="logo" src="/logos/dbx.png" />
       <img class="logo" src="/logos/jaymar.svg" />
       <img class="logo" src="/logos/austere.png" />
-      <img class="logo" src="/logos/crown.png" />
-      <img class="logo" src="/logos/dual.png" />
-      <img class="logo" src="/logos/fiio.png" />
       <img class="logo" src="/logos/flexson.png" />
-      <img class="logo" src="/logos/human.png" />
-      <img class="logo" src="/logos/lab.png" />
-      <img class="logo" src="/logos/mission.png" />
-      <img class="logo" src="/logos/one_for_all.svg" />
-      <img class="logo" src="/logos/revel.svg" />
       <img class="logo" src="/logos/soundcraft.png" />
-      <img class="logo" src="/logos/synth.svg" />
+      <img class="logo" src="/logos/human.png" />
+      <img class="logo" src="/imgs/demo/totem-logo.png" />
+      <img class="logo" src="/logos/distinct.png" />
+      <img class="logo" src="/logos/fiio.png" />
+      <img class="logo" src="/logos/revel.svg" />
+      <img class="logo" src="/logos/dual.png" />
+      <img class="logo" src="/logos/one_for_all.svg" />
+      <img class="logo" src="/logos/mission.png" />
+      <img class="logo" src="/logos/mark.svg" />
+      <img class="logo" src="/logos/lab.png" />
       <img class="logo" src="/logos/thorens.png" />
       <img class="logo" src="/logos/velodyne.png" />
     </div>
@@ -56,6 +58,10 @@ const year = new Date().getFullYear();
       <footer>&copy; {year}, Brian Surrett. All rights reserved.</footer>
     </main>
     <style>
+      :root {
+        --bg-dim: 0.5;
+      }
+
       *,
       *::before,
       *::after {
@@ -154,7 +160,7 @@ const year = new Date().getFullYear();
         gap: 0rem 2rem;
         justify-content: space-between;
         background-color: white;
-        filter: blur(1px) brightness(69%);
+        filter: blur(1px) brightness(var(--bg-dim));
       }
 
       .logo {
@@ -251,7 +257,7 @@ const year = new Date().getFullYear();
           overflow-y: auto;
           margin-top: 2.5rem;
           gap: 2rem;
-          padding: 5rem 16vw;
+          padding: 3rem;
           align-items: center;
         }
 
@@ -265,10 +271,11 @@ const year = new Date().getFullYear();
         }
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1380px) {
         main {
-          grid-template-rows: 1fr 1fr 1fr 0fr;
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          padding: 5rem;
         }
 
         .logo {
@@ -282,7 +289,7 @@ const year = new Date().getFullYear();
         }
 
         footer {
-          grid-column: span 3;
+          grid-column: span 4;
         }
       }
     </style>
@@ -300,5 +307,16 @@ const year = new Date().getFullYear();
         font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
       }
     </style>
+
+    <script>
+      let y = 0.5;
+
+      const main = document.querySelector("main");
+      main.onscroll = () => {
+        y = 0.5 + (main.scrollTop / (main.scrollHeight - main.offsetHeight)) * 0.4;
+        console.log(y);
+        document.documentElement.style.setProperty("--bg-dim", y.toString());
+      };
+    </script>
   </body>
 </html>
