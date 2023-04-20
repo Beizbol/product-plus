@@ -2,7 +2,7 @@
 import Page from "../layouts/Page.astro";
 ---
 
-<Page title="Home" bg={false}>
+<Page title="Home">
   <div class="card info">
     <img class="photo" src="/imgs/dad.png" alt="" />
     <div id="contact">
@@ -23,7 +23,7 @@ import Page from "../layouts/Page.astro";
         <path class="cls-1" d="M404.6,114.82a4.25,4.25,0,0,1-1.88-1.56,4.21,4.21,0,0,1-.71-2.37,4,4,0,0,1,1.24-3,4.26,4.26,0,0,1,6,0,4,4,0,0,1,1.24,3,4.25,4.25,0,0,1-4.25,4.26A4.19,4.19,0,0,1,404.6,114.82Zm-.78-1.45a3.3,3.3,0,0,0,2.43,1,3.24,3.24,0,0,0,2.44-1,3.52,3.52,0,0,0,1-2.49,3.44,3.44,0,0,0-1-2.47,3.27,3.27,0,0,0-2.44-1,3.23,3.23,0,0,0-2.42,1,3.44,3.44,0,0,0-1,2.47A3.48,3.48,0,0,0,403.82,113.37Zm1.62-.24h-.86v-4.65h1.74a2,2,0,0,1,1.17.31,1,1,0,0,1,.47.93,1,1,0,0,1-.33.76,1.51,1.51,0,0,1-.83.37,1,1,0,0,1,.76.65l.7,1.63h-.92l-.58-1.39a1.07,1.07,0,0,0-.33-.47,1,1,0,0,0-.58-.13h-.41Zm0-4v1.38H406c.75,0,1.12-.25,1.12-.74s-.38-.64-1.14-.64Z"></path><path class="cls-1" d="M166.76,98.39c.41,7.52,3.12,10.68,9.47,10.68,4.92,0,7.48-1.81,7.59-5.38h9.69c-.19,7.7-6.57,12.21-17.69,12.21-6.77,0-11.58-1.69-14.47-5S157,102.57,157,96c0-13.34,5.75-20.06,19-20.06,12.81,0,18.33,6.68,18.33,19.91,0,.71-.07,2-.07,2.55Zm.08-5.56h17.54c-.49-7.17-3-10-8.49-10C170,82.84,167.32,85.66,166.84,92.83Z"></path></g
       >
     </svg>
-    <h3>Sales Agent Serving Ontario</h3>
+    <h3>Eastern and Northern Ontario</h3>
   </a>
   <a class="card wrap" href="https://totemacoustic.com/">
     <img class="logo" src="/imgs/demo/totem-logo.png" alt="" />
@@ -108,6 +108,8 @@ import Page from "../layouts/Page.astro";
     .accent {
       color: var(--color-accent-alt);
       font-style: italic;
+      font-size: x-large;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .card {
@@ -170,7 +172,7 @@ import Page from "../layouts/Page.astro";
 
     #call,
     #email {
-      border: 2px solid var(--color-accent);
+      box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #111;
       border-radius: 0.5rem;
       cursor: pointer;
       padding: 0.5rem;
