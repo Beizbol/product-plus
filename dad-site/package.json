@@ -12,8 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^1.0.1",
-    "astro": "^2.0.16"
+    "@astrojs/sitemap": "^1.4.0",
+    "astro": "^4.5.4"
   },
   "devDependencies": {
     "fs-extra": "^11.1.1",
